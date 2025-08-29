@@ -107,6 +107,8 @@
     /* Back to top */
     #topBtn{position:fixed; right:18px; bottom:18px; z-index:60; border:0; border-radius:999px; padding:12px 14px; background:linear-gradient(90deg, var(--accent-2), var(--accent)); color:#0b0f17; font-weight:800; box-shadow:0 12px 30px rgba(0,0,0,.35); cursor:pointer}
       /* Avatar */
+    .avatar-simple{width:128px; height:128px; border-radius:50%; display:block; margin:0 auto 16px; border:3px solid rgba(255,255,255,0.9); object-fit:cover}
+      /* Avatar */
     .avatar-wrap{display:flex; align-items:center; gap:16px; margin-bottom:16px}
     .avatar-frame{width:116px; height:116px; border-radius:50%; padding:3px; background:conic-gradient(from 140deg, var(--accent) 0 33.3%, var(--accent-3) 33.3% 66.6%, var(--accent-2) 66.6% 100%); box-shadow: var(--shadow)}
     .avatar{width:100%; height:100%; border-radius:50%; object-fit:cover; display:block; border:3px solid rgba(255,255,255,0.85)}
@@ -130,11 +132,7 @@
       <div class="wrap">
         <div class="card">
           <div class="glow-ring"></div>
-          <div class="avatar-wrap" aria-hidden="false">
-            <div class="avatar-frame" role="img" aria-label="Portrait of Rodrigue Nze Eyo'o">
-              <img class="avatar" src="https://github.com/ROdRIGUE65/graph-ai-portfolio-rne/blob/main/PHOTO%20VISA_RODRIGUE%20NZE%20EYOO.jpg?raw=true" alt="Rodrigue Nze Eyo'o headshot" loading="lazy" />
-            </div>
-          </div>
+          <img class="avatar-simple" src="https://raw.githubusercontent.com/ROdRIGUE65/graph-ai-portfolio-rne/main/PHOTO%20VISA_RODRIGUE%20NZE%20EYOO.jpg" alt="Rodrigue Nze Eyo'o portrait" decoding="async" />
           <h1>Generative AI for Work & Research — Portfolio</h1>
           <p class="subtitle">By <strong>Rodrigue Nze Eyo'o</strong> (MD, MPH) — Public Health Physician & Strategic Information Adviser. Exploring practical GenAI for data analysis, research automation, and communication.</p>
           <div class="badges">
@@ -269,9 +267,9 @@
           </div>
           <div class="submission">
             <div class="sub-week">Week 2</div>
-            <div class="sub-title">AI‑Automated Data Analysis</div>
-            <div class="sub-meta">Code Interpreter • dashboards • batch workflows</div>
-            <div class="sub-actions"><a class="btn" href="#" aria-disabled="true">View submission →</a></div>
+            <div class="sub-title">Workshop 2: Automated Data Analysis</div>
+            <div class="sub-meta">Analyzed Gapminder data to explore relationships between two global indicators using AI tools.</div>
+            <div class="sub-actions"><a class="btn" href="https://raw.githubusercontent.com/ROdRIGUE65/graph-ai-portfolio-rne/main/GDP_LIFEXPECTANCY_GLOBAL.pdf" target="_blank" rel="noopener">Open report (PDF) →</a></div>
           </div>
           <div class="submission">
             <div class="sub-week">Week 3</div>
