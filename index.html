@@ -112,7 +112,10 @@
     .avatar-wrap{display:flex; align-items:center; gap:16px; margin-bottom:16px}
     .avatar-frame{width:116px; height:116px; border-radius:50%; padding:3px; background:conic-gradient(from 140deg, var(--accent) 0 33.3%, var(--accent-3) 33.3% 66.6%, var(--accent-2) 66.6% 100%); box-shadow: var(--shadow)}
     .avatar{width:100%; height:100%; border-radius:50%; object-fit:cover; display:block; border:3px solid rgba(255,255,255,0.85)}
-  </style>
+      /* Form embed */
+    .form-iframe{width:100%; height:900px; border:0; border-radius:12px; background:#fff}
+    @media (max-width:900px){ .form-iframe{ height:1100px; } }
+</style>
 </head>
 <body>
   <header class="nav">
@@ -123,6 +126,7 @@
         <a href="#about">About me</a>
         <a href="#course">About the course</a>
         <a href="#submissions">Weekly submissions</a>
+        <a href="#contact">Consultation</a>
       </nav>
     </div>
   </header>
@@ -310,6 +314,18 @@
         </div>
       </div>
     </section>
+      <!-- Contact for Consultation -->
+    <section id="contact">
+      <div class="wrap">
+        <p class="section-title">Contact for Consultation</p>
+        <div class="panel">
+          <h2>Book a consultation</h2>
+          <p class="lead">Use the form below to request a consultation on HIV Strategic Information, data analysis, or GenAI workflows.</p>
+          <div class="hr"></div>
+          <iframe class="form-iframe" title="Consultation request form" src="https://docs.google.com/forms/d/e/1FAIpQLSeb5pmk-GmZU3IiXQmSOnOqc_VQpuczzs__DwppNQrE-tk6Sw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0" loading="lazy">Chargement…</iframe>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -325,7 +341,6 @@
     document.getElementById('year').textContent = new Date().getFullYear();
     document.getElementById('updated').textContent = new Date().toLocaleDateString(undefined, {year:'numeric', month:'short', day:'2-digit'});
   </script>
-<script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js" defer></script>
-<script src="https://files.bpcontent.cloud/2025/09/10/17/20250910173326-EJWQMFWY.js" defer></script>
 </body>
 </html>
+
