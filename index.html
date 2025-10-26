@@ -3,384 +3,724 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ro | Generative AI for Work & Research — Portfolio</title>
-  <meta name="description" content="Rodrigue Nze Eyo'o — One‑page portfolio for the Generative AI for Work & Research course. About me, course overview, and weekly submissions." />
+  <title>Ro | Generative AI for Work &amp; Research — Portfolio</title>
+  <meta name="description" content="Rodrigue Nze Eyo'o — Portfolio for the Generative AI for Work & Research course. About me, course overview, and weekly submissions including Capstone: Design & Build." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --bg: #0a1320; /* deep blue base to harmonize with Gabon flag */
-      --panel: rgba(255,255,255,0.06);
-      --text: #eaf2fb;
-      --muted: #aebecc;
-      --accent: #00A95C;   /* Gabon green */
-      --accent-2: #2F6CE5; /* Gabon blue */
-      --accent-3: #FCD116; /* Gabon gold */
-      --ring: rgba(47,108,229,0.55);
-      --shadow: 0 10px 30px rgba(0,0,0,0.35);
-      --radius-xl: 22px;
+      --bg:#0a1320; /* deep blue base to harmonize with Gabon flag */
+      --panel:rgba(255,255,255,0.06);
+      --text:#eaf2fb;
+      --muted:rgba(234,242,251,0.6);
+      --accent:#4ade80;
+      --border:rgba(255,255,255,0.12);
+      --radius-lg:1rem;
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+
+    *{
+      box-sizing:border-box;
+      -webkit-font-smoothing:antialiased;
+    }
+
     body{
-      margin:0; color:var(--text); background:
-        radial-gradient(1200px 800px at 12% -10%, rgba(47,108,229,0.22), transparent 60%), /* blue */
-        radial-gradient(900px 600px at 88% -5%, rgba(252,209,22,0.25), transparent 60%),    /* gold */
-        radial-gradient(950px 550px at 50% 115%, rgba(0,169,92,0.22), transparent 60%),      /* green */
-        var(--bg);
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      margin:0;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(74,222,128,0.18) 0%, rgba(10,19,32,0) 60%),
+        radial-gradient(circle at 80% 30%, rgba(255,215,0,0.08) 0%, rgba(10,19,32,0) 70%),
+        linear-gradient(160deg,#0a1320 0%,#000000 100%);
+      font-family:'Inter', system-ui, -apple-system, BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
       line-height:1.6;
+      scroll-behavior:smooth;
     }
-    a{color:var(--accent); text-decoration:none}
-    a:hover{opacity:.9; text-decoration:underline}
 
-    /* Layout */
-    .wrap{max-width:1100px; margin:0 auto; padding:0 20px}
-    header.nav{
-      position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(8px);
-      background:linear-gradient(180deg, rgba(10,19,32,0.9), rgba(10,19,32,0.6));
-      border-bottom:1px solid rgba(255,255,255,0.06);
+    img{
+      max-width:100%;
+      height:auto;
+      display:block;
     }
-    .flagline{height:4px; background:linear-gradient(90deg, var(--accent) 0 33.33%, var(--accent-3) 33.33% 66.66%, var(--accent-2) 66.66% 100%);}    
-    .nav-inner{display:flex; align-items:center; justify-content:space-between; gap:18px; padding:14px 0}
-    .brand{display:flex; align-items:center; gap:10px; font-weight:700}
-    .brand .dot{width:10px; height:10px; border-radius:50%; background:conic-gradient(from 140deg, var(--accent) 0 33%, var(--accent-3) 33% 66%, var(--accent-2) 66% 100%); box-shadow:0 0 20px var(--ring)}
-    .brand span{letter-spacing:.3px}
-    nav a{margin:0 10px; padding:8px 12px; border-radius:10px; transition:all .2s ease}
-    nav a:hover{background:rgba(255,255,255,0.06)}
 
-    .hero{position:relative; padding:88px 0 64px}
-    .hero .card{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-      border:1px solid rgba(255,255,255,0.08); box-shadow:var(--shadow); border-radius:var(--radius-xl);
-      padding:34px; overflow:hidden; position:relative}
-    .hero h1{
-      font-family:"Playfair Display", serif; font-size: clamp(34px, 5vw, 58px); line-height:1.1; margin:0 0 10px;
-      background:linear-gradient(90deg, #e9faff, var(--accent-3) 45%, #eafff3 90%);
-      -webkit-background-clip:text; background-clip:text; color:transparent; letter-spacing:.2px
+    h1,h2,h3,h4{
+      font-family:'Playfair Display', Georgia, 'Times New Roman', serif;
+      font-weight:600;
+      line-height:1.25;
+      color:var(--text);
+      margin-top:0;
     }
-    .subtitle{font-size: clamp(15px, 2.6vw, 19px); color:var(--muted)}
-    .hero .badges{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
-    .pill{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; font-size:13px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08)}
-    .glow-ring{position:absolute; inset:-2px; border-radius:inherit; padding:1px; background:conic-gradient(from 180deg at 50% 50%, var(--accent) 0%, transparent 60%, var(--accent-2) 80%, var(--accent-3) 95%);
-      -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-      -webkit-mask-composite:xor; mask-composite:exclude; opacity:.35; filter:blur(.4px)}
 
-    section{padding:70px 0}
-    .section-title{font-size:13px; letter-spacing:2.5px; text-transform:uppercase; color:var(--muted); margin:0 0 16px}
-    h2{font-size: clamp(24px, 4vw, 38px); margin:0 0 18px}
+    h1{
+      font-size:clamp(1.6rem,1vw+1.2rem,2rem);
+      font-weight:700;
+    }
 
-    /* Cards & grids */
-    .grid{display:grid; gap:22px}
-    .grid.two{grid-template-columns:repeat(2, minmax(0,1fr))}
-    .grid.three{grid-template-columns:repeat(3, minmax(0,1fr))}
-    @media (max-width:900px){.grid.two,.grid.three{grid-template-columns:1fr}}
-    .panel{background:var(--panel); border:1px solid rgba(255,255,255,0.08); border-radius:18px; padding:22px}
+    h2{
+      font-size:1.25rem;
+      margin-bottom:.5rem;
+    }
 
-    .list{margin:0; padding-left:18px}
-    .list li{margin:6px 0}
+    h3{
+      font-size:1rem;
+      text-transform:none;
+      letter-spacing:-0.02em;
+      margin-bottom:.5rem;
+      color:var(--text);
+    }
 
-    .kv{display:flex; flex-wrap:wrap; gap:10px}
-    .chip{background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); border-radius:999px; padding:8px 12px; font-size:13px}
+    p{
+      color:var(--text);
+      font-size:0.95rem;
+      line-height:1.6;
+      margin-top:0;
+      margin-bottom:1rem;
+    }
 
-    /* Submission cards */
-    .submission{position:relative; padding:20px; border-radius:16px; background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)); border:1px solid rgba(255,255,255,0.08); transition:transform .15s ease, box-shadow .15s ease}
-    .submission:hover{transform:translateY(-3px); box-shadow:0 10px 30px rgba(0,0,0,0.35)}
-    .sub-week{font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--muted)}
-    .sub-title{font-weight:700; font-size:18px; margin:6px 0}
-    .sub-meta{font-size:13px; color:var(--muted)}
-    .sub-actions{margin-top:10px}
-    .btn{display:inline-flex; align-items:center; gap:8px; font-weight:600; border-radius:12px; padding:10px 14px; background:linear-gradient(90deg, var(--accent-2), var(--accent)); border:1px solid rgba(255,255,255,0.1)}
-    .btn[aria-disabled="true"]{opacity:.65; cursor:not-allowed}
+    small{
+      color:var(--muted);
+      font-size:0.8rem;
+      line-height:1.4;
+    }
 
-    /* Footer */
-    footer{padding:50px 0 60px; color:var(--muted)}
-    .footer-inner{display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between}
-    .tiny{font-size:12px}
+    ul{
+      padding-left:1.2rem;
+      margin:0 0 1rem 0;
+      font-size:0.95rem;
+      color:var(--text);
+    }
 
-    /* Utilities */
-    .lead{font-size:18px; color:#d8e4f7}
-    .muted{color:var(--muted)}
-    .hr{height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent); margin:18px 0}
+    li{
+      margin-bottom:0.4rem;
+    }
 
-    /* Back to top */
-    #topBtn{position:fixed; right:18px; bottom:18px; z-index:60; border:0; border-radius:999px; padding:12px 14px; background:linear-gradient(90deg, var(--accent-2), var(--accent)); color:#0b0f17; font-weight:800; box-shadow:0 12px 30px rgba(0,0,0,.35); cursor:pointer}
+    a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+    a:hover,
+    a:focus{
+      text-decoration:underline;
+    }
 
-    /* Avatar */
-    .avatar-simple{width:128px; height:128px; border-radius:50%; display:block; margin:0 auto 16px; border:3px solid rgba(255,255,255,0.9); object-fit:cover}
-    .avatar-wrap{display:flex; align-items:center; gap:16px; margin-bottom:16px}
-    .avatar-frame{width:116px; height:116px; border-radius:50%; padding:3px; background:conic-gradient(from 140deg, var(--accent) 0 33.3%, var(--accent-3) 33.3% 66.6%, var(--accent-2) 66.6% 100%); box-shadow: var(--shadow)}
-    .avatar{width:100%; height:100%; border-radius:50%; object-fit:cover; display:block; border:3px solid rgba(255,255,255,0.85)}
+    /* Utility text classes */
+    .muted{
+      color:var(--muted);
+    }
+    .byline{
+      font-size:0.95rem;
+      color:var(--text);
+      margin-bottom:1rem;
+    }
 
-    /* Embedded form */
-    .form-panel{background:linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03)); border:1px solid rgba(255,255,255,0.1); border-radius:18px; padding:18px}
-    .form-embed{border-radius:14px; overflow:hidden; box-shadow: var(--shadow);}
-    .form-embed iframe{width:100%; height:820px; border:0; background:#fff}
-    @media (max-width:900px){.form-embed iframe{height:980px}}
+    /* Layout wrappers */
+    .wrapper{
+      width:100%;
+      max-width:1200px;
+      margin-left:auto;
+      margin-right:auto;
+      padding:2rem 1rem;
+    }
+
+    header.site-header{
+      position:sticky;
+      top:0;
+      z-index:999;
+      background:rgba(10,19,32,0.65);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav-wrapper{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:flex-start;
+      justify-content:space-between;
+      row-gap:1rem;
+    }
+
+    .brand{
+      font-size:0.9rem;
+      font-weight:500;
+      color:var(--text);
+      line-height:1.4;
+    }
+
+    nav.site-nav{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:0.75rem 1rem;
+      font-size:0.8rem;
+      line-height:1.4;
+    }
+
+    nav.site-nav a{
+      color:var(--muted);
+      font-weight:500;
+      text-decoration:none;
+      border:1px solid transparent;
+      border-radius:999px;
+      padding:0.35rem 0.75rem;
+      background:rgba(255,255,255,0.03);
+    }
+    nav.site-nav a:hover,
+    nav.site-nav a:focus{
+      color:var(--text);
+      border-color:var(--border);
+      background:rgba(255,255,255,0.07);
+      text-decoration:none;
+    }
+
+    /* Hero / About */
+    .hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr);
+      gap:2rem;
+    }
+    @media(min-width:768px){
+      .hero-grid{
+        grid-template-columns:minmax(0,2fr) minmax(200px,1fr);
+        align-items:flex-start;
+      }
+    }
+
+    .hero-photo{
+      max-width:220px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .hero-photo img{
+      border-radius:1rem;
+      border:2px solid var(--border);
+      box-shadow:0 20px 60px rgba(0,0,0,0.8),0 0 20px rgba(74,222,128,0.4);
+      width:100%;
+      height:auto;
+      object-fit:cover;
+    }
+
+    .tag-row{
+      font-size:0.8rem;
+      line-height:1.5;
+      color:var(--muted);
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem .75rem;
+      align-items:center;
+      margin-bottom:1.5rem;
+    }
+    .tag-row a{
+      font-weight:600;
+      color:var(--accent);
+      text-decoration:none;
+      white-space:nowrap;
+    }
+
+    .panel-block{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius-lg);
+      padding:1.25rem 1rem 1rem;
+      margin-top:1.5rem;
+    }
+    @media(min-width:768px){
+      .panel-block{
+        padding:1.5rem 2rem 1.5rem;
+      }
+    }
+
+    .subgrid-2col{
+      display:grid;
+      grid-template-columns:minmax(0,1fr);
+      gap:1.5rem;
+    }
+    @media(min-width:900px){
+      .subgrid-2col{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+    }
+
+    .section-heading{
+      font-size:1.25rem;
+      font-family:'Playfair Display', Georgia, serif;
+      font-weight:600;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:baseline;
+      gap:.5rem;
+      margin-bottom:1rem;
+    }
+    .section-heading span.label{
+      font-size:.75rem;
+      font-family:'Inter',system-ui,sans-serif;
+      font-weight:500;
+      color:var(--accent);
+      background:rgba(74,222,128,0.12);
+      border:1px solid rgba(74,222,128,0.4);
+      padding:0.2rem 0.5rem;
+      border-radius:0.5rem;
+      line-height:1.3;
+    }
+
+    /* Weekly cards */
+    .cards-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr);
+      gap:1rem;
+    }
+    @media(min-width:700px){
+      .cards-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+    }
+    @media(min-width:1100px){
+      .cards-grid{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+      }
+    }
+
+    .week-card{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius-lg);
+      padding:1rem 1rem 1.25rem;
+      display:flex;
+      flex-direction:column;
+      min-height:200px;
+    }
+    .week-card h3{
+      font-size:0.9rem;
+      font-weight:600;
+      font-family:'Inter',system-ui,sans-serif;
+      color:var(--accent);
+      margin-bottom:0.25rem;
+      line-height:1.4;
+    }
+    .week-title{
+      font-size:1rem;
+      font-weight:600;
+      margin:0 0 .5rem;
+      color:var(--text);
+      font-family:'Playfair Display', Georgia, serif;
+      line-height:1.3;
+    }
+    .week-desc{
+      font-size:0.9rem;
+      color:var(--text);
+      flex-grow:1;
+      line-height:1.5;
+      margin-bottom:1rem;
+    }
+
+    .btn-inline{
+      display:inline-flex;
+      align-items:center;
+      gap:.4rem;
+      font-size:0.8rem;
+      font-weight:500;
+      line-height:1.3;
+      color:var(--accent);
+      background:rgba(74,222,128,0.08);
+      border:1px solid rgba(74,222,128,0.4);
+      border-radius:999px;
+      padding:0.4rem .75rem;
+      text-decoration:none;
+      width:max-content;
+    }
+    .btn-inline:hover,
+    .btn-inline:focus{
+      background:rgba(74,222,128,0.15);
+      text-decoration:none;
+    }
+    .btn-inline.disabled{
+      opacity:.4;
+      filter:grayscale(1);
+      cursor:default;
+      pointer-events:none;
+      background:rgba(255,255,255,0.05);
+      color:var(--muted);
+      border:1px solid var(--border);
+    }
+
+    /* Consultation form iframe */
+    .consult-iframe-wrapper{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius-lg);
+      padding:1rem;
+      overflow:hidden;
+    }
+    .consult-iframe{
+      width:100%;
+      min-height:780px;
+      border:0;
+      background:#fff;
+      border-radius:.5rem;
+    }
 
     /* Showcase flyer */
-    .flyer-figure{margin:0}
-    .flyer-img{width:100%; height:auto; display:block; border-radius:18px; border:1px solid rgba(255,255,255,0.12); box-shadow:var(--shadow)}
+    .flyer-box{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius-lg);
+      padding:1rem;
+      text-align:center;
+    }
+    .flyer-box img{
+      border-radius:.5rem;
+      border:1px solid var(--border);
+      box-shadow:0 20px 60px rgba(0,0,0,0.8),0 0 20px rgba(74,222,128,0.4);
+      max-width:360px;
+      width:100%;
+      margin-left:auto;
+      margin-right:auto;
+      height:auto;
+    }
+
+    footer.site-footer{
+      border-top:1px solid var(--border);
+      background:rgba(0,0,0,0.3);
+      text-align:center;
+      padding:2rem 1rem 4rem;
+      font-size:0.8rem;
+      color:var(--muted);
+      line-height:1.5;
+    }
+
+    footer.site-footer .legal{
+      color:var(--text);
+      font-weight:500;
+    }
   </style>
 </head>
+
 <body>
-  <header class="nav">
-    <div class="flagline"></div>
-    <div class="wrap nav-inner">
-      <div class="brand"><span class="dot"></span><span>Ro • Generative AI for Work & Research</span></div>
-      <nav>
-        <a href="#about">About me</a>
-        <a href="#course">About the course</a>
-        <a href="#submissions">Weekly submissions</a>
-        <a href="#consultation">Consultation</a>
-        <a href="#showcase">Showcase</a>
-      </nav>
+<header class="site-header">
+  <div class="wrapper nav-wrapper">
+    <div class="brand">
+      <strong>Ro</strong> • Generative AI for Work &amp; Research
     </div>
-  </header>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#about">About me</a>
+      <a href="#course">About the course</a>
+      <a href="#weekly">Weekly submissions</a>
+      <a href="#consultation">Consultation</a>
+      <a href="#showcase">Showcase</a>
+    </nav>
+  </div>
+</header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="wrap">
-        <div class="card">
-          <div class="glow-ring"></div>
-          <img class="avatar-simple" src="https://raw.githubusercontent.com/ROdRIGUE65/graph-ai-portfolio-rne/main/PHOTO%20VISA_RODRIGUE%20NZE%20EYOO.jpg" alt="Rodrigue Nze Eyo'o portrait" decoding="async" />
-          <h1>Generative AI for Work & Research — Portfolio</h1>
-          <p class="subtitle">By <strong>Rodrigue Nze Eyo'o</strong> (MD, MPH) — Public Health Physician & Strategic Information Adviser. Exploring practical GenAI for data analysis, research automation, and communication.</p>
-          <div class="badges">
-            <span class="pill">16+ years in HIV SI</span>
-            <span class="pill">UNAIDS • Caribbean, Rwanda, Gabon</span>
-            <span class="pill">R • Stata • Spectrum • Naomi • Shiny90</span>
-            <a class="pill" href="https://www.linkedin.com/in/rodrigue-nze-eyo-o-4862778/" target="_blank" rel="noopener">LinkedIn ↗</a>
-          </div>
-        </div>
+<main>
+  <!-- ABOUT ME / HERO -->
+  <section id="about" class="wrapper">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1>Generative AI for Work &amp; Research — Portfolio</h1>
+        <p class="byline">
+          By Rodrigue Nze Eyo'o (MD, MPH) — Public Health Physician &amp; Strategic Information Adviser.
+          Exploring practical GenAI for data analysis, research automation, and communication.
+        </p>
+        <p class="tag-row">
+          <span>16+ years in HIV SI UNAIDS • Caribbean, Rwanda, Gabon</span>
+          <span>R • Stata • Spectrum • Naomi • Shiny90</span>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </p>
       </div>
-    </section>
 
-    <!-- About Me -->
-    <section id="about">
-      <div class="wrap">
-        <p class="section-title">About me</p>
-        <div class="grid two">
-          <div class="panel">
-            <h2>Public health physician & Strategic Information leader</h2>
-            <p class="lead">I design and lead data‑driven analyses, HIV estimates & modelling, and results‑based management to accelerate progress toward <strong>95‑95‑95</strong>. I enjoy turning complex data into actionable insight and building capacity across teams and ministries.</p>
-            <div class="hr"></div>
-            <div class="grid two">
-              <div>
-                <h3>Core strengths</h3>
-                <ul class="list">
-                  <li>HIV modelling & analytics: Spectrum/AIM, Goals, Naomi, Shiny90</li>
-                  <li>Strategic Information, surveillance, UBRAF/JPMS, GAM reporting</li>
-                  <li>Data tools: R, Stata, Epi Info; Excel/PowerPoint</li>
-                  <li>Partner coordination: PEPFAR, Global Fund, PAHO/WHO, CSOs</li>
-                  <li>Languages: English & French (advanced), Spanish (basic)</li>
-                </ul>
-              </div>
-              <div>
-                <h3>Experience snapshot</h3>
-                <ul class="list">
-                  <li><strong>UNAIDS, Caribbean</strong> — Strategic Information Adviser (2023–present)</li>
-                  <li><strong>UNAIDS, Rwanda</strong> — Strategic Information Adviser (2021–2022)</li>
-                  <li><strong>UNDP, Gabon</strong> — M&E Specialist, Global Fund grants (2005–2007)</li>
-                  <li><strong>University of Health Sciences, Gabon</strong> — Associate Lecturer</li>
-                </ul>
-              </div>
-            </div>
-            <div class="hr"></div>
-            <div class="kv">
-              <span class="chip">MD (General Medicine)</span>
-              <span class="chip">MPH (Cotonou, Benin)</span>
-              <span class="chip">PRINCE2® Practitioner</span>
-              <span class="chip">AI & R data analysis training (Univ. Geneva)</span>
-            </div>
-          </div>
-          <div class="panel">
-            <h3>Focus areas during this course</h3>
-            <ul class="list">
-              <li>Build no‑code research sites and structured documents with Markdown & HTML</li>
-              <li>Automate analyses with ChatGPT Code Interpreter & spreadsheet workflows</li>
-              <li>Text mining for rapid evidence synthesis and literature reviews</li>
-              <li>Prototype custom research assistants (RAG) for HIV SI use‑cases</li>
-              <li>Create clear visuals, slide decks, and short explainers with AI</li>
-            </ul>
-            <div class="hr"></div>
-            <p class="muted tiny">Note: Contact details intentionally minimized to reduce spam. Connect via LinkedIn above.</p>
-          </div>
-        </div>
+      <div class="hero-photo">
+        <img src="PHOTO%20VISA_RODRIGUE%20NZE%20EYOO.jpg" alt="Rodrigue Nze Eyo'o portrait" />
       </div>
-    </section>
-
-    <!-- About the Course -->
-    <section id="course">
-      <div class="wrap">
-        <p class="section-title">About the course</p>
-        <div class="grid two">
-          <div class="panel">
-            <h2>Generative AI for Work & Research</h2>
-            <p class="lead">An 8‑week, mentor‑supported bootcamp (University of Geneva‑affiliated GRAPH Courses) focused on <strong>no‑code AI tools for task automation</strong> and practical research workflows.</p>
-            <ul class="list">
-              <li>Weekly live workshops & help sessions; private community forums</li>
-              <li>Personalized feedback, capstone coaching, and shareable certificate</li>
-              <li>Lifetime access to the tutorial library</li>
-            </ul>
-            <div class="hr"></div>
-            <div class="grid two">
-              <div>
-                <h3>Modules (highlights)</h3>
-                <ul class="list">
-                  <li><strong>1.</strong> LLMs 101; Markdown/LaTeX/HTML; building simple research sites</li>
-                  <li><strong>2.</strong> AI‑automated data analysis; dashboards; batch file workflows</li>
-                  <li><strong>3.</strong> GenAI for research & text analysis; literature review tools</li>
-                  <li><strong>4.</strong> Custom GPTs & chatbots; RAG and knowledge bases</li>
-                  <li><strong>5.</strong> AI for task automation; agentic browser workflows</li>
-                  <li><strong>6.</strong> Communication & outreach; figures, videos, prompts</li>
-                  <li><strong>7.</strong> Capstone project & showcase</li>
-                </ul>
-              </div>
-              <div>
-                <h3>Grading rubric</h3>
-                <ul class="list">
-                  <li>Online quizzes — 15%</li>
-                  <li>Workshop assignments — 35%</li>
-                  <li>Attendance & participation — 10%</li>
-                  <li>Final project — 40% (pass ≥ 80%; attend ≥ 5 workshops)</li>
-                </ul>
-                <div class="hr"></div>
-                <p class="muted tiny">Instructors/mentors include faculty and researchers from University of Geneva and partners.</p>
-              </div>
-            </div>
-          </div>
-          <div class="panel">
-            <h3>Why this course fits my work</h3>
-            <p>As a Strategic Information Adviser working with HIV estimates and program data, I’m applying the bootcamp’s practical tools to speed up analyses, create reproducible outputs, and improve communication with partners.</p>
-            <ul class="list">
-              <li>Automated report generation for GAM/UBRAF indicators</li>
-              <li>Evidence synthesis from large document collections</li>
-              <li>Lightweight web pages for sharing estimates and dashboards</li>
-              <li>Prototyping RAG assistants to support country teams</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Weekly Submissions -->
-    <section id="submissions">
-      <div class="wrap">
-        <p class="section-title">My weekly submissions</p>
-        <h2>Eight‑week roadmap & placeholders</h2>
-        <div class="grid two">
-          <div class="submission">
-            <div class="sub-week">Week 1</div>
-            <div class="sub-title">Websites, Documents & Presentations</div>
-            <div class="sub-meta">Markdown/LaTeX/HTML • Canvas site prototype</div>
-            <div class="sub-actions"><a class="btn" href="#" aria-disabled="true">View submission →</a></div>
-          </div>
-          <div class="submission">
-            <div class="sub-week">Week 2</div>
-            <div class="sub-title">Workshop 2: Automated Data Analysis</div>
-            <div class="sub-meta">Analyzed Gapminder data to explore relationships between two global indicators using AI tools.</div>
-            <div class="sub-actions"><a class="btn" href="https://raw.githubusercontent.com/ROdRIGUE65/graph-ai-portfolio-rne/main/GDP_LIFEXPECTANCY_GLOBAL.pdf" target="_blank" rel="noopener">Open report (PDF) →</a></div>
-          </div>
-          <div class="submission">
-            <div class="sub-week">Week 3</div>
-            <div class="sub-title">Workshop 3: GenAI for Research & Text Analysis</div>
-            <div class="sub-meta">Used Language Models (LLMs) directly within Google Sheets to extract specific information from hundreds of data analysis job postings. Analyzed two indicators: “Years of Experience” and “Programming Language Requirements”.</div>
-            <div class="sub-actions"><a class="btn" href="https://raw.githubusercontent.com/ROdRIGUE65/graph-ai-portfolio-rne/main/Job_Market_LLMs_Report_RNE_v3.pdf" target="_blank" rel="noopener">Open report (PDF) →</a></div>
-          </div>
-          <div class="submission">
-            <div class="sub-week">Week 4</div>
-            <div class="sub-title">Custom GPTs & RAG Chatbots</div>
-            <div class="sub-meta">Context windows • retrieval • knowledge bases</div>
-            <div class="sub-actions"><a class="btn" href="#" aria-disabled="true">View submission →</a></div>
-          </div>
-          <div class="submission">
-            <div class="sub-week">Week 5</div>
-            <div class="sub-title">AI for Task Automation</div>
-            <div class="sub-meta">Agents • browser control • orchestration</div>
-            <div class="sub-actions"><a class="btn" href="#" aria-disabled="true">View submission →</a></div>
-          </div>
-          <div class="submission">
-            <div class="sub-week">Week 6</div>
-            <div class="sub-title">Communication & Outreach</div>
-            <div class="sub-meta">Figures • video abstracts • visualization prompts</div>
-            <div class="sub-actions"><a class="btn" href="#" aria-disabled="true">View submission →</a></div>
-          </div>
-          <div class="submission">
-            <div class="sub-week">Week 7</div>
-            <div class="sub-title">Capstone: Design & Build</div>
-            <div class="sub-meta">Project progress • peer feedback</div>
-            <div class="sub-actions"><a class="btn" href="#" aria-disabled="true">View submission →</a></div>
-          </div>
-          <div class="submission">
-            <div class="sub-week">Week 8</div>
-            <div class="sub-title">Final Showcase</div>
-            <div class="sub-meta">Presentation • public Q&A</div>
-            <div class="sub-actions"><a class="btn" href="#" aria-disabled="true">View submission →</a></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact for Consultation -->
-    <section id="consultation">
-      <div class="wrap">
-        <p class="section-title">Contact for Consultation</p>
-        <h2>Book a consultation</h2>
-        <div class="form-panel">
-          <p class="lead">Use the form below to reach out for consultations on Strategic Information, HIV estimates & modelling, dashboards, or GenAI workflows. I’ll get back to you shortly.</p>
-          <div class="form-embed" aria-label="Embedded consultation form">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeb5pmk-GmZU3IiXQmSOnOqc_VQpuczzs__DwppNQrE-tk6Sw/viewform?embedded=true" width="640" height="776" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
-          </div>
-          <div class="hr"></div>
-          <p class="tiny muted">If the form doesn’t load, you can open it directly here: 
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeb5pmk-GmZU3IiXQmSOnOqc_VQpuczzs__DwppNQrE-tk6Sw/viewform" target="_blank" rel="noopener">Open Google Form ↗</a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Showcase Event (Flyer) -->
-    <section id="showcase">
-      <div class="wrap">
-        <p class="section-title">Upcoming showcase</p>
-        <div class="panel">
-          <h2>Final Showcase — You’re invited</h2>
-          <p class="lead">Save the date and share the flyer below with colleagues and friends who may be interested.</p>
-          <figure class="flyer-figure">
-            <img
-              class="flyer-img"
-              src="https://raw.githubusercontent.com/ROdRIGUE65/graph-ai-portfolio-rne/main/Sunday%2C%20October%205%2C%205pm%20GMT.png"
-              alt="Promotional flyer for the upcoming showcase event (Sunday, October 5, 5pm GMT)."
-              loading="lazy"
-              decoding="async"
-            />
-            <figcaption class="tiny muted" aria-live="polite">Promotional flyer for the upcoming showcase event.</figcaption>
-          </figure>
-          <div class="sub-actions" style="margin-top:14px">
-            <a class="btn" href="https://raw.githubusercontent.com/ROdRIGUE65/graph-ai-portfolio-rne/main/Sunday%2C%20October%205%2C%205pm%20GMT.png" download>
-              Download flyer (PNG) →
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap footer-inner">
-      <div>© <span id="year"></span> Rodrigue Nze Eyo'o. All rights reserved.</div>
-      <div class="tiny">Last updated: <span id="updated"></span></div>
     </div>
-  </footer>
 
-  <button id="topBtn" title="Back to top" aria-label="Back to top" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+    <div class="panel-block">
+      <h2>Public health physician &amp; Strategic Information leader</h2>
+      <p>
+        I design and lead data-driven analyses, HIV estimates &amp; modelling, and results-based
+        management to accelerate progress toward 95-95-95. I enjoy turning complex data into
+        actionable insight and building capacity across teams and ministries.
+      </p>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('updated').textContent = new Date().toLocaleDateString(undefined, {year:'numeric', month:'short', day:'2-digit'});
-  </script>
-  <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js" defer></script>
-  <script src="https://files.bpcontent.cloud/2025/09/10/17/20250910173326-EJWQMFWY.js" defer></script>
+      <h3>Core strengths</h3>
+      <ul>
+        <li>HIV modelling &amp; analytics: Spectrum/AIM, Goals, Naomi, Shiny90</li>
+        <li>Strategic Information, surveillance, UBRAF/JPMS, GAM reporting</li>
+        <li>Data tools: R, Stata, Epi Info; Excel/PowerPoint</li>
+        <li>Partner coordination: PEPFAR, Global Fund, PAHO/WHO, CSOs</li>
+        <li>Languages: English &amp; French (advanced), Spanish (basic)</li>
+      </ul>
+
+      <h3>Experience snapshot</h3>
+      <ul>
+        <li>UNAIDS, Caribbean — Strategic Information Adviser (2023–present)</li>
+        <li>UNAIDS, Rwanda — Strategic Information Adviser (2021–2022)</li>
+        <li>UNDP, Gabon — M&amp;E Specialist, Global Fund grants (2005–2007)</li>
+        <li>University of Health Sciences, Gabon — Associate Lecturer</li>
+      </ul>
+
+      <p>
+        MD (General Medicine) • MPH (Cotonou, Benin) • PRINCE2® Practitioner • AI &amp; R data analysis training (Univ. Geneva)
+      </p>
+
+      <h3>Focus areas during this course</h3>
+      <ul>
+        <li>Build no-code research sites and structured documents with Markdown &amp; HTML</li>
+        <li>Automate analyses with ChatGPT Code Interpreter &amp; spreadsheet workflows</li>
+        <li>Text mining for rapid evidence synthesis and literature reviews</li>
+        <li>Prototype custom research assistants (RAG) for HIV SI use-cases</li>
+        <li>Create clear visuals, slide decks, and short explainers with AI</li>
+      </ul>
+
+      <p class="muted">
+        <small>Note: Contact details intentionally minimized to reduce spam. Connect via LinkedIn above.</small>
+      </p>
+    </div>
+  </section>
+
+  <!-- ABOUT THE COURSE -->
+  <section id="course" class="wrapper">
+    <div class="panel-block">
+      <h2>Generative AI for Work &amp; Research</h2>
+      <p>
+        An 8-week, mentor-supported bootcamp (University of Geneva-affiliated GRAPH Courses) focused
+        on no-code AI tools for task automation and practical research workflows.
+      </p>
+
+      <ul>
+        <li>Weekly live workshops &amp; help sessions; private community forums</li>
+        <li>Personalized feedback, capstone coaching, and shareable certificate</li>
+        <li>Lifetime access to the tutorial library</li>
+      </ul>
+
+      <h3>Modules (highlights)</h3>
+      <ul>
+        <li>1. LLMs 101; Markdown/LaTeX/HTML; building simple research sites</li>
+        <li>2. AI-automated data analysis; dashboards; batch file workflows</li>
+        <li>3. GenAI for research &amp; text analysis; literature review tools</li>
+        <li>4. Custom GPTs &amp; chatbots; RAG and knowledge bases</li>
+        <li>5. AI for task automation; agentic browser workflows</li>
+        <li>6. Communication &amp; outreach; figures, videos, prompts</li>
+        <li>7. Capstone project &amp; showcase</li>
+      </ul>
+
+      <h3>Grading rubric</h3>
+      <ul>
+        <li>Online quizzes — 15%</li>
+        <li>Workshop assignments — 35%</li>
+        <li>Attendance &amp; participation — 10%</li>
+        <li>Final project — 40% (pass ≥ 80%; attend ≥ 5 workshops)</li>
+      </ul>
+
+      <p>
+        Instructors/mentors include faculty and researchers from University of Geneva and partners.
+      </p>
+
+      <h3>Why this course fits my work</h3>
+      <p>
+        As a Strategic Information Adviser working with HIV estimates and program data, I’m applying
+        the bootcamp’s practical tools to speed up analyses, create reproducible outputs, and improve
+        communication with partners.
+      </p>
+      <ul>
+        <li>Automated report generation for GAM/UBRAF indicators</li>
+        <li>Evidence synthesis from large document collections</li>
+        <li>Lightweight web pages for sharing estimates and dashboards</li>
+        <li>Prototyping RAG assistants to support country teams</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WEEKLY SUBMISSIONS -->
+  <section id="weekly" class="wrapper">
+    <div class="section-heading">
+      <div>My weekly submissions</div>
+      <span class="label">Eight-week roadmap &amp; deliverables</span>
+    </div>
+
+    <div class="cards-grid">
+      <!-- Week 1 -->
+      <article class="week-card">
+        <h3>Week 1</h3>
+        <div class="week-title">Websites, Documents &amp; Presentations</div>
+        <div class="week-desc">
+          Markdown / LaTeX / HTML • Canvas site prototype.
+        </div>
+        <span class="btn-inline disabled" aria-disabled="true">View submission →</span>
+      </article>
+
+      <!-- Week 2 -->
+      <article class="week-card">
+        <h3>Week 2</h3>
+        <div class="week-title">Workshop 2: Automated Data Analysis</div>
+        <div class="week-desc">
+          Analyzed Gapminder-style global indicators and explored relationships between GDP and life
+          expectancy using AI-assisted data workflows.
+        </div>
+        <a class="btn-inline" href="GDP_LIFEXPECTANCY_GLOBAL.pdf" target="_blank" rel="noopener">
+          Open report (PDF) →
+        </a>
+      </article>
+
+      <!-- Week 3 -->
+      <article class="week-card">
+        <h3>Week 3</h3>
+        <div class="week-title">Workshop 3: GenAI for Research &amp; Text Analysis</div>
+        <div class="week-desc">
+          Used Language Models (LLMs) directly inside Google Sheets to extract requirements from
+          hundreds of data analysis job postings. Tracked two indicators: “Years of Experience” and
+          “Programming Language Requirements”.
+        </div>
+        <a class="btn-inline" href="Job_Market_LLMs_Report_RNE_v3.pdf" target="_blank" rel="noopener">
+          Open report (PDF) →
+        </a>
+      </article>
+
+      <!-- Week 4 -->
+      <article class="week-card">
+        <h3>Week 4</h3>
+        <div class="week-title">Custom GPTs &amp; RAG Chatbots</div>
+        <div class="week-desc">
+          Built retrieval-augmented assistants to answer context-specific questions using uploaded
+          policy and program documents. Topics: context windows, retrieval, knowledge bases.
+        </div>
+        <span class="btn-inline disabled" aria-disabled="true">View submission →</span>
+      </article>
+
+      <!-- Week 5 -->
+      <article class="week-card">
+        <h3>Week 5</h3>
+        <div class="week-title">AI for Task Automation</div>
+        <div class="week-desc">
+          Explored browser automation, light agents, and orchestration of routine Strategic
+          Information workflows.
+        </div>
+        <span class="btn-inline disabled" aria-disabled="true">View submission →</span>
+      </article>
+
+      <!-- Week 6 -->
+      <article class="week-card">
+        <h3>Week 6</h3>
+        <div class="week-title">Communication &amp; Outreach</div>
+        <div class="week-desc">
+          AI-generated figures, video abstracts, and visualization prompts for stakeholder updates
+          and advocacy briefs.
+        </div>
+        <span class="btn-inline disabled" aria-disabled="true">View submission →</span>
+      </article>
+
+      <!-- Week 7 -->
+      <article class="week-card">
+        <h3>Week 7</h3>
+        <div class="week-title">Workshop 7: Capstone — Design &amp; Build</div>
+        <div class="week-desc">
+          Created an AI-generated HIV Key Performance Indicators (KPIs) Interactive Dashboard for the
+          Caribbean. Includes live indicator &amp; country filters, map, scorecards, and exportable
+          visuals.
+        </div>
+        <a class="btn-inline" href="https://rodrigue65.github.io/Final_Project_Interactive_Dashboard/" target="_blank" rel="noopener">
+          Open dashboard →
+        </a>
+      </article>
+
+      <!-- Week 8 -->
+      <article class="week-card">
+        <h3>Week 8</h3>
+        <div class="week-title">Final Showcase</div>
+        <div class="week-desc">
+          Presentation, Q&amp;A, and discussion of how AI dashboards can support real-time HIV Strategic
+          Information decision-making in Caribbean settings.
+        </div>
+        <span class="btn-inline disabled" aria-disabled="true">View submission →</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONSULTATION -->
+  <section id="consultation" class="wrapper">
+    <div class="section-heading">
+      <div>Contact for Consultation</div>
+      <span class="label">Book a consultation</span>
+    </div>
+
+    <div class="panel-block">
+      <p>
+        Use the form below to reach out for consultations on Strategic Information, HIV estimates &amp;
+        modelling, dashboards, or GenAI workflows. I’ll get back to you shortly.
+      </p>
+
+      <div class="consult-iframe-wrapper">
+        <iframe
+          class="consult-iframe"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeb5pmk-GmZU3IiXQmSOnOqc_VQpuczzs__DwppNQrE-tk6Sw/viewform?embedded=true"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          loading="lazy"
+          title="Consultation request form"
+        >
+          Chargement…
+        </iframe>
+      </div>
+
+      <p style="margin-top:1rem;font-size:0.8rem;color:var(--muted);">
+        If the form doesn’t load, you can
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeb5pmk-GmZU3IiXQmSOnOqc_VQpuczzs__DwppNQrE-tk6Sw/viewform"
+           target="_blank" rel="noopener">
+          open it directly here ↗
+        </a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- SHOWCASE -->
+  <section id="showcase" class="wrapper">
+    <div class="section-heading">
+      <div>Upcoming showcase</div>
+      <span class="label">Final Showcase — You’re invited</span>
+    </div>
+
+    <div class="panel-block subgrid-2col">
+      <div>
+        <p>
+          Save the date and share the flyer below with colleagues and friends who may be interested.
+        </p>
+
+        <div class="flyer-box">
+          <img
+            src="Sunday,%20October%205,%205pm%20GMT.png"
+            alt="Promotional flyer for the upcoming showcase event (Sunday, October 5, 5pm GMT)."
+          />
+        </div>
+
+        <p style="text-align:center;margin-top:1rem;">
+          <a class="btn-inline"
+             href="Sunday,%20October%205,%205pm%20GMT.png"
+             download
+             target="_blank"
+             rel="noopener">
+            Download flyer (PNG) →
+          </a>
+        </p>
+      </div>
+
+      <div>
+        <p class="muted" style="font-size:0.8rem;">
+          This showcase previews how lightweight AI + public health data pipelines can deliver
+          country-ready visuals (dashboards, scorecards, maps) for HIV Strategic Information in the
+          Caribbean.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrapper" style="padding:0;">
+    <div class="legal">© Rodrigue Nze Eyo'o. All rights reserved.</div>
+    <div style="margin-top:.5rem;">
+      <small>Last updated: 26 Oct 2025</small>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
